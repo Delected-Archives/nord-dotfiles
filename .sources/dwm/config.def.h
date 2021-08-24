@@ -15,11 +15,11 @@ static const char col_gray1[]       = "#2e3440"; // (nord 0)
 // inactive window border
 static const char col_gray2[]       = "#d8dee9"; // (nord 4)
 
-// idk what this is
-static const char col_gray3[]       = "#bbbbbb"; // default
+// other tag text colour
+static const char col_gray3[]       = "#d8dee9"; // (nord 4)
 
 // current tag and window text colour
-static const char col_gray4[]       = "#d8dee9"; // (nord 4)
+static const char col_gray4[]       = "#e5e9f0"; // (nord 5)
 
 // current tag and window background colour
 static const char col_cyan[]        = "#5e81ac"; // (nord 10)

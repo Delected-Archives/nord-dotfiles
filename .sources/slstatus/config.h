@@ -4,7 +4,7 @@
 const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
-static const char unknown_str[] = "0";
+static const char unknown_str[] = "N/A";
 
 /* maximum output string length */
 #define MAXLEN 2048
@@ -65,7 +65,7 @@ static const char unknown_str[] = "0";
  */
 static const struct arg args[] = {
 	// battery
-	{battery_perc, "  %s% |", NULL},
+	{battery_perc, "  %s |", NULL},
 	// volume (might have to edit script a little to make it work)
 	{run_command, "  %s |", "amixer get Master | awk -F 'Mono:|[][]' 'BEGIN {RS=\"\"}{ print $3 }'"},
 	// date
