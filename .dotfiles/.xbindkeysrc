@@ -1,0 +1,17 @@
+"amixer set Master toggle"
+    KP_Multiply
+
+"amixer set Master 5%-"
+    KP_Subtract
+
+"amixer set Master 5%+"
+    KP_Add
+
+"xbacklight -dec 10"
+    F7
+
+"xbacklight -inc 10"
+    F8
+
+"scrot -s"
+   Shift+Mod4 + s

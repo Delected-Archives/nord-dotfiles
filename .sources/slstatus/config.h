@@ -65,9 +65,9 @@ static const char unknown_str[] = "N/A";
  */
 static const struct arg args[] = {
 	// battery
-	{battery_perc, "  %s |", NULL},
+	// {battery_perc, " 󰂂 %s% |", NULL},
 	// volume (might have to edit script a little to make it work)
-	{run_command, "  %s |", "amixer get Master | awk -F 'Mono:|[][]' 'BEGIN {RS=\"\"}{ print $3 }'"},
+	{run_command, " 󰕾 %s |", "amixer get Master | awk -F 'Mono:|[][]' 'BEGIN {RS=\"\"}{ print $3 }'"},
 	// date
-	{ datetime, "  %s ",           "%A %d, %I:%M %p" }
+	{ datetime, " 󰃭 %s ",           "%A %d, %I:%M %p" }
 };
