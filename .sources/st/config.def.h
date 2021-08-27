@@ -132,14 +132,8 @@ unsigned int defaultbg = 256;
 static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 256;
 
-/*
- * Default shape of cursor
- * 2: Block ("█")
- * 4: Underline ("_")
- * 6: Bar ("|")
- * 7: Snowman ("☃")
- */
-static unsigned int cursorshape = 2;
+static unsigned int cursorstyle = 5;
+static Rune stcursor = 0x2603; /* snowman (U+2603) */
 
 /*
  * Default columns and rows numbers
@@ -200,8 +194,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = 2} }, // -1 means 1 page, other number means amount of lines
+	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = 2} },
 };
 
 /*

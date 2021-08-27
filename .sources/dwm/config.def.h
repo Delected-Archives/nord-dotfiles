@@ -1,13 +1,15 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=13"}; // { "JetBrains Mono:size=13", "Material Design Icons Desktop:size=14" }; 
+static const int vertpad            = 5;       /* vertical padding of bar */
+static const int sidepad            = 5;       /* horizontal padding of bar */
+static const char *fonts[]          = { "JetBrains Mono:size=13", "Material Design Icons Desktop:size=15" }; // not using the patched jetbrains font because i like the material icons to be bigger
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=13";
 
 // background
@@ -33,7 +35,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3" }; // { "󰆍", "󰖟", "󰘑", "󰌳", "󰸱", "󰇘" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -49,7 +51,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -58,12 +60,12 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #include "horizgrid.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
- 	{ "[@]",      spiral },
- 	{ "[\\]",     dwindle },
-	{ "#",        horizgrid },
+	{ "󰾍",      tile },
+ 	{ "󰕖",      spiral },
+ 	{ "󰹵",     dwindle },
+	{ "󰕯",        horizgrid },
 	{ "[M]",      monocle },
-	{ "><>",      NULL },
+	{ "󱃣",      NULL },
 	{ NULL,       NULL },
 };
 
